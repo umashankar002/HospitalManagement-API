@@ -1,3 +1,17 @@
+To run this application, please follow the steps outlined below. Additionally, there are several endpoints available that can be tested using a tool like Postman.
+
+Step-1:Configure MySQL Workbench
+		-Create a new schema by executing the following SQL query
+		-CREATE SCHEMA hospital_db;
+
+Step-2:Update application.properties file in your Spring Boot project
+		-spring.datasource.username=root
+		spring.datasource.password=password
+
+Step-3:Run the Application:
+		-Make sure you have the necessary dependencies and configurations in your project (e.g., Spring Security, JWT).
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Sign Up:
 Method: POST
 Endpoint: http://localhost:8080/api/auth/signup
