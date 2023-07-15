@@ -19,12 +19,14 @@ public class PatientController {
         this.patientService = patientService;
     }
 
+
     @PreAuthorize("hasRole('STAFF')")
     @PostMapping
     public ResponseEntity<Patient> admitPatient(@RequestBody Patient patient) {
         Patient admittedPatient = patientService.admitPatient(patient);
         return new ResponseEntity<>(admittedPatient, HttpStatus.CREATED);
     }
+
 
     @PreAuthorize("hasRole('STAFF')")
     @GetMapping
